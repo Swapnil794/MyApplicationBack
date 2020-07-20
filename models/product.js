@@ -1,6 +1,7 @@
 const mongoose=require("mongoose");
 const { model } = require("./user");
 const {Objectid}=mongoose.Schema;
+const category=require("./category")
 const productSchema= new mongoose.Schema
 (
     {
@@ -28,7 +29,7 @@ const productSchema= new mongoose.Schema
         category:
         {
             type:Objectid,
-            ref:category,
+            ref:"category",
             required:true
         },
         stock:

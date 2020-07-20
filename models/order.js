@@ -1,5 +1,5 @@
-const mongoose=require("mongooose");
-const user = require("./user");
+const mongoose=require("mongoose");
+const User = require("./user");
 const product = require("./product");
 const {Objectid}=mongoose.Schema
 const productcartSchema=new mongooose.Schema
