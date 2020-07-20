@@ -1,18 +1,12 @@
 const mongoose=require("mongoose");
-const categorySchema= new mongoose.Schema(
-    {
-        category:
-        {
-            type:String,
-            require:true,
-            unique:true,
-            trim:true,
-            maxlenght:32
-        }
-    },
-    {
-        timestamp:true
-    }
-);
-
-module.exports=mongoose.model("category",categorySchema);
+const { kMaxLength } = require("buffer");
+const categorySchema=new mongoose.Schema({
+      name:{
+          type:String,
+          trim:true,
+          maxlength:32,
+          unique:true,
+          required:true,
+      }  
+},{timestamps:true});
+module.exports=mongoose.model("Category",categorySchema);
